@@ -1,0 +1,34 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  @include flex;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background: black;
+  color: white;
+}
+main {
+  @include flex;
+  margin-top: 10vh;
+}
+
+footer {
+  @include flex;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  color: white;
+
+}
