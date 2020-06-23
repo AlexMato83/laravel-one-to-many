@@ -4,7 +4,7 @@
   @csrf
   @method('POST')
 
-  <form action="index.html" method="post">
+  <form action="{{route('update_task',$task['id'])}}" method="post">
 
     <label for="name">NAME</label>
     <input type="text" name="name" value="{{$task['name']}}"><br>

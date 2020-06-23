@@ -19,4 +19,23 @@ class TaskController extends Controller
       $task = Task::findOrFail($id);
       return view('editTask', compact('task'));
     }
+
+    public function show($id){
+
+      $task = Task::findOrFail($id);
+      return view('showTask', compact('task'));
+    }
+
+    public function update(Request $request, $id){
+
+      $validateData = $request ->validate([
+         'name'=> 'required',
+         'description' => 'required',
+         'deadline' => 'required',
+         'employee_id' => 'required'
+      ]);
+
+      Task::whereId($id) -> update($validateData);
+      return redirect() -> route('home');    
+    }
 }

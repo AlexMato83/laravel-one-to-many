@@ -6,10 +6,11 @@
   <ul>
     @foreach ($tasks as $task)
       <li>
-        <a href="{{route('edit_task',$task['id'])}}">Attività: {{$task['name']}}</a><br>
-        
+        Attività:{{$task['name']}}</a><br>
+
         Dipendente: {{$task -> employee -> firstname}}
                     {{$task -> employee -> lastname}}<br><br>
+        <a href="{{route('show_task',$task['id'])}}">MOSTRA DETTAGLI</a>
       </li>
     @endforeach
   </ul>
