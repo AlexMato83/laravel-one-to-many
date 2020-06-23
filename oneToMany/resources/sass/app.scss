@@ -19,7 +19,12 @@ header {
 }
 main {
   @include flex;
+  flex-direction: column;
   margin-top: 15vh;
+  margin-bottom:15vh;
+  & > a {
+    margin-bottom: 30px;
+  }
 }
 
 footer {
